@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Referensi Digital</title>
+    <link rel="stylesheet" href="form-style.css">
+</head>
+<body class="form-page">
+
+    <div class="form-container">
+        <form id="main-form" action="#">
+            <div class="form-header">
+                <img src="https://www.upnvj.ac.id/id/files/thumb/89f8a80e388ced3704b091e21f510755/520" alt="Logo UPNVJ" class="logo">
+                <h2>FORM SISTEM REFERENSI DIGITAL MAHASISWA ILMU KOMPUTER</h2>
+            </div>
+            
+            <input type="text" id="nim" class="form-input" placeholder="NIM Mahasiswa" required>
+            <input type="text" id="nama" class="form-input" placeholder="Nama Mahasiswa" required>
+            <input type="text" id="semester" class="form-input" placeholder="Semester Mahasiswa" required>
+
+            <select id="research-type" class="form-input" required>
+                <option value="" disabled selected>Pilih Penelitian</option>
+                <option value="paper">Paper</option>
+                <option value="buku">Buku</option>
+                <option value="jurnal">Jurnal Pengabdian</option>
+            </select>
+
+            <div id="paper-fields" class="research-fields">
+                <fieldset>
+                    <legend>Paper</legend>
+                    <div class="field-row">
+                        <label for="penulis-paper">Nama Penulis</label>
+                        <input type="text" id="penulis-paper" placeholder="Nama Penulis Paper">
+                    </div>
+                    <div class="field-row">
+                        <label for="judul-paper">Judul Paper</label>
+                        <input type="text" id="judul-paper" placeholder="Judul Paper">
+                    </div>
+                    <div class="field-row">
+                        <label for="tahun-paper">Tahun Publikasi</label>
+                        <input type="text" id="tahun-paper" placeholder="Tahun Publikasi Paper">
+                    </div>
+                    <div class="field-row">
+                        <label for="volume-paper">Volume, Edisi, Halaman</label>
+                        <input type="text" id="volume-paper" placeholder="Volume Paper">
+                    </div>
+                    <div class="field-row">
+                        <label for="doi-paper">Digital Object Identifier (DOI)</label>
+                        <input type="text" id="doi-paper" placeholder="DOI Paper">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div id="buku-fields" class="research-fields">
+                <fieldset>
+                    <legend>Buku</legend>
+                    <div class="field-row">
+                        <label for="penulis-buku">Nama Buku</label>
+                        <input type="text" id="penulis-buku" placeholder="Nama Penulis Buku">
+                    </div>
+                    <div class="field-row">
+                        <label for="judul-buku">Judul Buku</label>
+                        <input type="text" id="judul-buku" placeholder="Judul Buku">
+                    </div>
+                    <div class="field-row">
+                        <label for="tahun-buku">Tahun Publikasi Buku</label>
+                        <input type="text" id="tahun-buku" placeholder="Tahun Publikasi Buku">
+                    </div>
+                    <div class="field-row">
+                        <label for="volume-buku">Volume, Edisi, Halaman</label>
+                        <input type="text" id="volume-buku" placeholder="Volume Buku">
+                    </div>
+                    <div class="field-row">
+                        <label for="isbn-buku">ISBN</label>
+                        <input type="text" id="isbn-buku" placeholder="ISBN">
+                    </div>
+                </fieldset>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit</button>
+            <button type="button" class="btn btn-back" onclick="window.location.href='index.html'">Kembali ke Home</button>
+        </form>
+    </div>
+
+    <script src="form-script.js"></script>
+</body>
+</html>
